@@ -20,6 +20,7 @@ import typescript from 'rollup-plugin-typescript2'
 
 const replacements = {
   'process.env.REACT_APP_IS_WIDGET': true,
+  'process.env.REACT_APP_LOCALES': "'./locales'",
 }
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx']
