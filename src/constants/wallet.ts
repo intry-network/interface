@@ -1,12 +1,7 @@
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
-import INJECTED_ICON_URL from '../assets/images/arrow-right.svg'
-import COINBASE_ICON_URL from '../assets/images/coinbaseWalletIcon.svg'
-import FORTMATIC_ICON_URL from '../assets/images/fortmaticIcon.png'
-import METAMASK_ICON_URL from '../assets/images/metamask.png'
-import PORTIS_ICON_URL from '../assets/images/portisIcon.png'
-import WALLETCONNECT_ICON_URL from '../assets/images/walletConnectIcon.svg'
-import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
+import INTRY_ICON_URL from '../assets/images/intry-logo.svg'
+import { intryConnector } from '../connectors'
 
 interface WalletInfo {
   connector?: AbstractConnector
@@ -21,6 +16,16 @@ interface WalletInfo {
 }
 
 export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
+  INTRY: {
+    connector: intryConnector,
+    name: 'Intry',
+    description: 'Login with email',
+    href: null,
+    color: '#4196FC',
+    primary: true,
+    iconURL: INTRY_ICON_URL,
+  },
+  /**
   INJECTED: {
     connector: injected,
     name: 'Injected',
@@ -82,4 +87,5 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     color: '#4A6C9B',
     mobile: true,
   },
+  */
 }

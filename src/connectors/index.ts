@@ -1,5 +1,6 @@
 import { Web3Provider } from '@ethersproject/providers'
 import { SafeAppConnector } from '@gnosis.pm/safe-apps-web3-react'
+import { IntryConnector } from '@intry/web3-intry-connector'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import { PortisConnector } from '@web3-react/portis-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
@@ -14,6 +15,8 @@ import { NetworkConnector } from './NetworkConnector'
 
 const FORMATIC_KEY = process.env.REACT_APP_FORTMATIC_KEY
 const PORTIS_ID = process.env.REACT_APP_PORTIS_ID
+
+export const intryConnector = new IntryConnector({}, true)
 
 export const network = new NetworkConnector({
   urls: INFURA_NETWORK_URLS,

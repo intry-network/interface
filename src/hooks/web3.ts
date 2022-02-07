@@ -4,11 +4,10 @@ import { useEffect, useState } from 'react'
 
 import { gnosisSafe, injected } from '../connectors'
 import { IS_IN_IFRAME } from '../constants/misc'
-import { isMobile } from '../utils/userAgent'
 
 export function useEagerConnect() {
   const { activate, active } = useWeb3React()
-  const [tried, setTried] = useState(false)
+  const [tried, setTried] = useState(true)
 
   // gnosisSafe.isSafeApp() races a timeout against postMessage, so it delays pageload if we are not in a safe app;
   // if we are not embedded in an iframe, it is not worth checking
@@ -29,6 +28,7 @@ export function useEagerConnect() {
     }
   }, [activate, setTriedSafe, triedSafe])
 
+  /**
   // then, if that fails, try connecting to an injected connector
   useEffect(() => {
     if (!active && triedSafe) {
@@ -49,6 +49,7 @@ export function useEagerConnect() {
       })
     }
   }, [activate, active, triedSafe])
+  */
 
   // wait until we get confirmation of a connection to flip the flag
   useEffect(() => {

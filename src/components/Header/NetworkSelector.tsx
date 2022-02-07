@@ -316,10 +316,7 @@ export default function NetworkSelector() {
           <FlyoutHeader>
             <Trans>Select a network</Trans>
           </FlyoutHeader>
-          <Row onSelectChain={handleChainSwitch} targetChain={SupportedChainId.MAINNET} />
           <Row onSelectChain={handleChainSwitch} targetChain={SupportedChainId.POLYGON} />
-          <Row onSelectChain={handleChainSwitch} targetChain={SupportedChainId.OPTIMISM} />
-          <Row onSelectChain={handleChainSwitch} targetChain={SupportedChainId.ARBITRUM_ONE} />
         </FlyoutMenu>
       )}
     </SelectorWrapper>
