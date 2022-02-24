@@ -107,7 +107,7 @@
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-typescript2": "^0.31.1",
     "sass": "^1.45.1",
-    "serve": "^11.3.2",
+    "serve": "^13.0.2",
     "start-server-and-test": "^1.11.0",
     "typechain": "^5.0.0",
     "typescript": "^4.2.3",
@@ -138,7 +138,8 @@
     "test": "react-scripts test --env=./custom-test-env.js",
     "test:e2e": "start-server-and-test 'serve build -l 3000' http://localhost:3000 'cypress run --record'",
     "widgets:start": "cosmos",
-    "widgets:build": "rollup --config --failAfterWarnings --configPlugin typescript2"
+    "widgets:build": "rollup --config --failAfterWarnings --configPlugin typescript2",
+    "serve": "serve -s build"
   },
   "browserslist": {
     "production": [
@@ -169,6 +170,7 @@
     "@ethersproject/wallet": "^5.4.0",
     "@fontsource/ibm-plex-mono": "^4.5.1",
     "@fontsource/inter": "^4.5.1",
+    "@intry/web3-intry-connector": "^6.0.1",
     "@lingui/core": "^3.9.0",
     "@lingui/macro": "^3.9.0",
     "@lingui/react": "^3.9.0",
