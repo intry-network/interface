@@ -18,12 +18,13 @@ interface WalletInfo {
 export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
   INTRY: {
     connector: intryConnector,
-    name: 'Intry',
+    name: 'Slide',
     description: 'Login with email',
     href: null,
     color: '#4196FC',
     primary: true,
     iconURL: INTRY_ICON_URL,
+    mobile: true,
   },
   /**
   INJECTED: {
