@@ -1,7 +1,7 @@
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
-import INTRY_ICON_URL from '../assets/images/intry-logo.svg'
-import { intryConnector } from '../connectors'
+import SLIDE_ICON_URL from '../assets/images/slide.svg'
+import { slideConnector } from '../connectors'
 
 interface WalletInfo {
   connector?: AbstractConnector
@@ -16,14 +16,14 @@ interface WalletInfo {
 }
 
 export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
-  INTRY: {
-    connector: intryConnector,
+  SLIDE: {
+    connector: slideConnector,
     name: 'Slide',
     description: 'Login with email',
     href: null,
     color: '#4196FC',
     primary: true,
-    iconURL: INTRY_ICON_URL,
+    iconURL: SLIDE_ICON_URL,
     mobile: true,
   },
   /**

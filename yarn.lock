@@ -2891,21 +2891,6 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
-"@intry/sdk@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@intry/sdk/-/sdk-0.0.4.tgz#58dcbef84163c9869e3405ba1e8c4812f96052c1"
-  integrity sha512-tdj0A3U+O1eE/Sq7YfHwUfyPuNtbPAuIdY1jTq0wyMJhbQf4CuMwyJ9ym9TQxRKxbQpxcU+D8zbtlX0Qfq1/JQ==
-
-"@intry/web3-intry-connector@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@intry/web3-intry-connector/-/web3-intry-connector-6.0.1.tgz#ac25e5f4f41fd4b2223e6ba704f6074c9306459d"
-  integrity sha512-HJMa5T/lta4mgPyvY5/pFuqFio2wZmsCPj5kZr/NC8rrIXozCrhVIxz9rb4KpMgtolLVwla6NKVycxqx/g+Fkg==
-  dependencies:
-    "@intry/sdk" "^0.0.4"
-    "@web3-react/abstract-connector" "^6.0.7"
-    "@web3-react/types" "^6.0.7"
-    tiny-warning "^1.0.3"
-
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
@@ -3775,6 +3760,21 @@
     html-entities "^1.2.0"
     querystring "^0.2.0"
     strip-ansi "^3.0.0"
+
+"@slide-web3/sdk@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@slide-web3/sdk/-/sdk-0.0.1.tgz#f918848ab2d29c5b21c5613104fa333018538afb"
+  integrity sha512-NF/8drZmGFpZ8hcqHp0JBBcFjJQjUygqveQhKErOj8D/s38VYfBWUTPgVLAkHg/4tq2Z2BlXMdMF76047XSNKw==
+
+"@slide-web3/web3-react-connector@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@slide-web3/web3-react-connector/-/web3-react-connector-6.0.0.tgz#31dc54cc78aec964857aef6b67c46c541076a19c"
+  integrity sha512-lMFKFknGxMT9OWG2XDFLWBtQucfRkG3DYYDEC92WCefb6QiKeCxiyDAjKpU+BpeQ68RNJ/vNBc78O/a0IKNPXQ==
+  dependencies:
+    "@slide-web3/sdk" "^0.0.1"
+    "@web3-react/abstract-connector" "^6.0.7"
+    "@web3-react/types" "^6.0.7"
+    tiny-warning "^1.0.3"
 
 "@styled-system/background@^5.1.2":
   version "5.1.2"
