@@ -92,9 +92,17 @@ export function useTokenBalancesWithLoadingIndicator(
 
 export function useTokenBalances(
   address?: string,
-  tokens?: (Token | undefined)[]
+  tokens?: (Token | undefined)[],
+  balanceIsZero?: boolean
 ): { [tokenAddress: string]: CurrencyAmount<Token> | undefined } {
-  return useTokenBalancesWithLoadingIndicator(address, tokens)[0]
+  const zeroBalance = useTokenBalancesWithLoadingIndicator('0xCeD08b79aD60c3C04DAA5eDA33d8dA1c9cE01Cd8', tokens)[0]
+  const actualBalance = useTokenBalancesWithLoadingIndicator(address, tokens)[0]
+
+  if (balanceIsZero) {
+    return zeroBalance
+  }
+
+  return actualBalance
 }
 
 // get the balance for a single token/account combo
@@ -109,14 +117,15 @@ export function useTokenBalance(account?: string, token?: Token): CurrencyAmount
 
 export function useCurrencyBalances(
   account?: string,
-  currencies?: (Currency | undefined)[]
+  currencies?: (Currency | undefined)[],
+  balanceIsZero?: boolean
 ): (CurrencyAmount<Currency> | undefined)[] {
   const tokens = useMemo(
     () => currencies?.filter((currency): currency is Token => currency?.isToken ?? false) ?? [],
     [currencies]
   )
 
-  const tokenBalances = useTokenBalances(account, tokens)
+  const tokenBalances = useTokenBalances(account, tokens, balanceIsZero)
   const containsETH: boolean = useMemo(() => currencies?.some((currency) => currency?.isNative) ?? false, [currencies])
   const ethBalance = useNativeCurrencyBalances(useMemo(() => (containsETH ? [account] : []), [containsETH, account]))
 
@@ -134,10 +143,12 @@ export function useCurrencyBalances(
 
 export default function useCurrencyBalance(
   account?: string,
-  currency?: Currency
+  currency?: Currency,
+  balanceIsZero?: boolean
 ): CurrencyAmount<Currency> | undefined {
   return useCurrencyBalances(
     account,
-    useMemo(() => [currency], [currency])
+    useMemo(() => [currency], [currency]),
+    balanceIsZero
   )[0]
 }

@@ -178,6 +178,18 @@ interface CurrencyInputPanelProps {
   loading?: boolean
 }
 
+const USDC_ADDR_POLYGON = '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174'
+
+const isUSDCInInput = (id: string, address?: string): boolean => {
+  if (!address) return false
+
+  if (address.toLowerCase() === USDC_ADDR_POLYGON.toLowerCase() && id === 'swap-currency-input') {
+    return true
+  }
+
+  return false
+}
+
 export default function CurrencyInputPanel({
   value,
   onUserInput,
@@ -202,7 +214,11 @@ export default function CurrencyInputPanel({
 }: CurrencyInputPanelProps) {
   const [modalOpen, setModalOpen] = useState(false)
   const { account } = useActiveWeb3React()
-  const selectedCurrencyBalance = useCurrencyBalance(account ?? undefined, currency ?? undefined)
+  const selectedCurrencyBalance = useCurrencyBalance(
+    account ?? undefined,
+    currency ?? undefined,
+    isUSDCInInput(id, (currency as any)?.address)
+  )
   const theme = useTheme()
 
   const handleDismissSearch = useCallback(() => {

@@ -408,7 +408,7 @@ export default function Swap({ history }: RouteComponentProps) {
                   independentField === Field.OUTPUT && !showWrap ? <Trans>From (at most)</Trans> : <Trans>From</Trans>
                 }
                 value={formattedAmounts[Field.INPUT]}
-                showMaxButton={showMaxButton}
+                showMaxButton={showMaxButton && false}
                 currency={currencies[Field.INPUT]}
                 onUserInput={handleTypeInput}
                 onMax={handleMaxInput}
