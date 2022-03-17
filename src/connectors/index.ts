@@ -16,7 +16,7 @@ import { NetworkConnector } from './NetworkConnector'
 const FORMATIC_KEY = process.env.REACT_APP_FORTMATIC_KEY
 const PORTIS_ID = process.env.REACT_APP_PORTIS_ID
 
-export const slideConnector = new SlideConnector({ showExternalWallets: true }, true)
+export const slideConnector = new SlideConnector({}, true)
 
 export const network = new NetworkConnector({
   urls: INFURA_NETWORK_URLS,

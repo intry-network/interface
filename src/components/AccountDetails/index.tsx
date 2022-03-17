@@ -8,7 +8,7 @@ import styled, { ThemeContext } from 'styled-components/macro'
 import { Connector } from 'widgets-web3-react/types'
 
 import { ReactComponent as Close } from '../../assets/images/x.svg'
-import { injected, portis, walletlink } from '../../connectors'
+import { injected, portis, slideConnector, walletlink } from '../../connectors'
 import { SUPPORTED_WALLETS } from '../../constants/wallet'
 import { clearAllTransactions } from '../../state/transactions/actions'
 import { ExternalLink, LinkStyledButton, ThemedText } from '../../theme'
@@ -316,6 +316,14 @@ export default function AccountDetails({
                     </>
                   )}
                 </AccountControl>
+                <WalletAction
+                  style={{ fontSize: '.825rem', fontWeight: 400 }}
+                  onClick={() => {
+                    slideConnector.getProvider().then((slide) => slide.open())
+                  }}
+                >
+                  <Trans>Open Slide</Trans>
+                </WalletAction>
               </AccountGroupingRow>
               <AccountGroupingRow>
                 {ENSName ? (
