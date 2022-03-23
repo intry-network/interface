@@ -320,6 +320,7 @@ export default function AccountDetails({
                   style={{ fontSize: '.825rem', fontWeight: 400 }}
                   onClick={() => {
                     slideConnector.getProvider().then((slide) => slide.open())
+                    toggleWalletModal()
                   }}
                 >
                   <Trans>Open Slide</Trans>
