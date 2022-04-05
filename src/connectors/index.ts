@@ -17,7 +17,7 @@ const FORMATIC_KEY = process.env.REACT_APP_FORTMATIC_KEY
 const PORTIS_ID = process.env.REACT_APP_PORTIS_ID
 
 export const slideConnector = new SlideConnector(
-  { showExternalWallets: true, slideBaseUrl: 'https://intry-widget-demo.zeet-intry.zeet.app' },
+  { slideBaseUrl: 'https://intry-widget-demo.zeet-intry.zeet.app' },
   true
 )
 

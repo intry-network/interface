@@ -3761,17 +3761,17 @@
     querystring "^0.2.0"
     strip-ansi "^3.0.0"
 
-"@slide-web3/sdk@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@slide-web3/sdk/-/sdk-0.0.2.tgz#9447e65a77f0b88f723bbe9d2e7e932dc272165b"
-  integrity sha512-AI+2Jgd1Zned3SAYzLKyeerd7nB4lEGbg2V6FXbgEEvk9Wjm3YMcRY1JXE2+nv6S5mEpvzEN8Sfp+2kt5SDtRA==
+"@slide-web3/sdk@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@slide-web3/sdk/-/sdk-0.1.1.tgz#223d847e64321299292e0ae047917aaa9631b097"
+  integrity sha512-jUcVPIDtYwftbE+wwxoKgNMLn39d2LHGO0OMqXYLJcVtlnvtiNhstB5z004JptPueiqWp1AC73pPt3vkXUfPxA==
 
-"@slide-web3/web3-react-connector@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@slide-web3/web3-react-connector/-/web3-react-connector-6.0.1.tgz#bb28a00fef758b01e215c9d40b0a58b97acda045"
-  integrity sha512-qdOQx7fXuuqJNo548XpHKLQ6YUQxku9llpBS2zOTr1Ev+3qJ6y7KE+/fqBHUPHvmwnLQRQA5luWmZzT7Vnq6hg==
+"@slide-web3/web3-react-connector@^6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@slide-web3/web3-react-connector/-/web3-react-connector-6.1.1.tgz#7ac74e2acf5c3b718fa01043e954613fecd8e269"
+  integrity sha512-PEQkdJE+UzC/xXOXbiBl1xTpQ5RrBiUC23lc4WM0QP6AGDloS9UoQ80ABFwKX+HxhE0Bg9WMq/hIqfBO4OJH6A==
   dependencies:
-    "@slide-web3/sdk" "^0.0.2"
+    "@slide-web3/sdk" "^0.1.1"
     "@web3-react/abstract-connector" "^6.0.7"
     "@web3-react/types" "^6.0.7"
     tiny-warning "^1.0.3"
